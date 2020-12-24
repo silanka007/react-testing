@@ -1,10 +1,10 @@
-import "./header.scss";
+import "./header.style.scss";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" data-test="header">
       <div className="wrapper">
-        <div className="logo">
+        <div className="logo" data-test="logo">
           LOGO
         </div>
       </div>
