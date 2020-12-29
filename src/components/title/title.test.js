@@ -40,5 +40,20 @@ describe("Title component", () => {
     beforeEach(() => {
       component = setUp()
     })
+
+    it("should not render", () => {
+      const titleComponent = findByAttr(component, "title");
+      expect(titleComponent.length).toBe(0)
+    })
+
+    it("should not render heading", () => {
+      const heading = findByAttr(component, "heading")
+      expect(heading.length).toBe(0)
+    })
+
+    it("should not render a desc paragraph", () => {
+			const desc = findByAttr(component, "desc");
+			expect(desc.length).toBe(0);
+		});
   });
 });
