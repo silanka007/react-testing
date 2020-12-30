@@ -1,6 +1,7 @@
 import "./title.style.scss"
+import PropTypes from "prop-types"
 
-const Title = ({heading, desc}) => {
+const Title = ({heading, desc, tempArr}) => {
   if(!heading) return null;
   return (
     <div data-test="title">
@@ -8,6 +9,17 @@ const Title = ({heading, desc}) => {
       <p data-test="desc">{desc}</p>
     </div>
   )
+}
+
+Title.propTypes = {
+  heading: PropTypes.string,
+  desc: PropTypes.string,
+  tempArr: PropTypes.arrayOf(PropTypes.shape({
+    age: PropTypes.number,
+    name: PropTypes.string,
+    stack: PropTypes.string,
+    isProficient: PropTypes.bool
+  }))
 }
 
 export default Title;
