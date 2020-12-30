@@ -1,5 +1,6 @@
 import "./title.style.scss"
 import PropTypes from "prop-types"
+import Button from "../button";
 
 const Title = ({heading, desc, tempArr}) => {
   if(!heading) return null;
@@ -7,6 +8,7 @@ const Title = ({heading, desc, tempArr}) => {
     <div className="title" data-test="title">
       <h1 data-test="heading">{heading}</h1>
       <p data-test="desc">{desc}</p>
+      <Button buttonText="load posts" />
     </div>
   )
 }
