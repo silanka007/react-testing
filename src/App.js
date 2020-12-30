@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <section>
-        <Title heading="Main Section" desc="The main section body is contained!" tempArr={tempArr} />
+        <Title heading="Posts" desc="Click the button to retrieve posts" tempArr={tempArr} />
       </section>
     </div>
   );
