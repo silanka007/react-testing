@@ -2,6 +2,7 @@ import Title from "./index";
 import { shallow, configure } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { findByAttr } from "../../../utils/findByAttr";
+import { checkProps } from "../../../utils/checkProps";
 
 configure({
 	adapter: new Adapter(),
@@ -12,6 +13,24 @@ const setUp = (props = {}) => {
 };
 
 describe("Title component", () => {
+
+	describe("checking proptypes", () => {
+		it("should not throw a warning for correct props", () => {
+			const expectedProps = {
+				heading: "test heading",
+				desc: "test desc",
+				tempArr: [{
+					age: 26,
+					name: "test name",
+					stack: "test stack",
+					isProficient: true
+				}]
+			}
+			const expectedErr = checkProps(Title, expectedProps)
+			expect(expectedErr).toBeUndefined()
+		})
+	})
+
 	describe("with props", () => {
 		let component;
 		beforeEach(() => {
