@@ -7,4 +7,3 @@ const middlewares = [Thunk]
 const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore)
 
 export const store = createStoreWithMiddleware(rootReducer)
-console.table({store})
