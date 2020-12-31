@@ -8,7 +8,6 @@ const Title = ({heading, desc, tempArr}) => {
     <div className="title" data-test="title">
       <h1 data-test="heading">{heading}</h1>
       <p data-test="desc">{desc}</p>
-      <Button buttonText="load posts" />
     </div>
   )
 }

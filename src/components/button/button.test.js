@@ -18,17 +18,20 @@ describe("button component", () => {
 			const propsErr = checkProps(Button, expectedProps);
 			expect(propsErr).toBeUndefined();
 		});
-  });
-  
-  describe("render", () => {
-    let component;
-    beforeEach((props={}) => {
-      component = shallow(<Button {...props} />)
-    })
-    it("should render", () => {
-      const button = findByAttr(component, "buttonComponent")
-      console.log(button.debug())
-      expect(button.length).toBe(1)
-    })
-  })
+	});
+
+	describe("render", () => {
+		let component;
+		beforeEach(() => {
+			const props = {
+				buttonText: "example text",
+				emitEvent: () => {},
+			};
+			component = shallow(<Button {...props} />);
+		});
+		it("should render", () => {
+			const button = findByAttr(component, "buttonComponent");
+			expect(button.length).toBe(1);
+		});
+	});
 });
