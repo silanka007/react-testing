@@ -6,7 +6,7 @@ export const types = {
 
 export const getPosts = () => async dispatch => {
   try {
-    const posts = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    const posts = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
     dispatch({
       type: types.GET_POST,
       payload: posts.data
