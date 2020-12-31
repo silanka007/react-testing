@@ -25,7 +25,7 @@ function App({ posts, getPosts }) {
 	};
 
 	return (
-		<div className="App">
+		<div className="App" data-test="appComponent">
 			<Header />
 			<section style={{ padding: "2rem" }}>
 				<Title

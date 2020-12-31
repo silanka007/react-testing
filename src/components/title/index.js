@@ -1,6 +1,5 @@
 import "./title.style.scss"
 import PropTypes from "prop-types"
-import Button from "../button";
 
 const Title = ({heading, desc, tempArr}) => {
   if(!heading) return null;

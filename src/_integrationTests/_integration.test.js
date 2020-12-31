@@ -14,7 +14,7 @@ describe("getPosts action creator", () => {
   afterEach(() => {
     moxios.uninstall()
   })
-  test("it should fetch posts", async() => {
+  test("should fetch posts", async() => {
     const expectedRes = [{
       title: "test title 1",
       body: "some text"
